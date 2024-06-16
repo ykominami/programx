@@ -1,0 +1,44 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-rake
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 3.1
+
+  DisplayCopNames: true
+  #
+  StyleGuideBaseURL: https://github.com/fortissimo1997/ruby-style-guide/blob/japanese/README.ja.md
+Layout:
+  # メソッド名をcamelCase に設定します
+  MethodName:
+    #  EnforcedStyle: camelCase
+    EnforcedStyle: snake_case
+  # 一行に 120 文字まで書いても OK とする
+  LineLength:
+  #  Max: 120
+  # Max: 150
+  # Max: 170
+  Max: 250
+
+Style:
+  # 日本語のコメントを OK とする
+  AsciiComments:
+    Enabled: false
+
+  ClassAndModuleChildren:
+    Enabled: false
+
+  BlockComments:
+    Enabled: false
+
+Style/StringConcatenation:
+  Enabled: false
+  # class documentation commentのアラートを出さない
+Style/HashSyntax:
+  Enabled: false
+
+Documentation:
+    Enabled: false
