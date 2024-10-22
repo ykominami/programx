@@ -17,3 +17,9 @@ gem 'rubocop', group: 'development', require: false
 gem 'rubocop-performance', group: 'development', require: false
 gem 'rubocop-rake', group: 'development', require: false
 gem 'rubocop-rspec', group: 'development', require: false
+
+gem 'bigdecimal'
+gem 'aruba'
+
+gem 'fiddle'
+gem 'logger'

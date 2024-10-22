@@ -41,6 +41,7 @@ class Programxgui
           @name_entry.text = @prodays.today_pn.to_s
         end
         horizontal_box do
+		  # ボタンNew cur
           stretchy false
           button('New cur') do
             stretchy false
@@ -49,6 +50,7 @@ class Programxgui
               data << new_file.to_s
             end
           end
+		  # ボタンOpen cur
           button('Open cur') do
             stretchy false
             on_clicked do
@@ -56,6 +58,7 @@ class Programxgui
               data << new_file.to_s
             end
           end
+		  # ボタンNew days
           button('New days') do
             stretchy false
             on_clicked do
@@ -63,6 +66,7 @@ class Programxgui
               @days_data << new_file.to_s
             end
           end
+		  # ボタンExit
           button('Exit') do
             stretchy false
             on_clicked do
