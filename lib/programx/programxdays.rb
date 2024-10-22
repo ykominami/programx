@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 module Programx
-  class Programxdays < BaseProgramx
-    attr_reader :today_pn, :today_str
+  class Programxdays < AbstProgramx
+    attr_reader :today_pn, :today_str, :files
 
     def initialize
       home_dir = Dir.home
@@ -15,8 +15,8 @@ module Programx
       @today_str = today.strftime('%Y%m%d')
       @today_pn = @days_pn + @today_str
       @today_pn.mkdir unless @today_pn.exist?
-      super()
-
+      @base = BaseProgramx.new
+      @files = @base.files
       @today_pn.children.map do |pn|
         @files << BaseProgramx.get_basename(pn) if pn.file?
       end
@@ -27,7 +27,7 @@ module Programx
       base_name ||= @today_str
       file_pn = get_new_file_pn(@today_pn, base_name, ext: ext)
       File.write(file_pn, '')
-      super(file_pn)
+      @base.open_with_new_file(file_pn)
       file_pn
     end
   end

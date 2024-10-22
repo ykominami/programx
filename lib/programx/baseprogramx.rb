@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Programx
-  class BaseProgramx
+  class BaseProgramx < AbstProgramx
     attr_reader :files
 
     def self.get_basename(pathn)

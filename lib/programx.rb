@@ -4,6 +4,7 @@ require 'pathname'
 require 'date'
 
 require_relative 'programx/version'
+require_relative 'programx/abst_programx'
 require_relative 'programx/baseprogramx'
 require_relative 'programx/programxcur'
 require_relative 'programx/programxdays'
