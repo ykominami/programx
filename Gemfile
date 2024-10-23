@@ -23,3 +23,4 @@ gem 'aruba'
 
 gem 'fiddle'
 gem 'logger'
+gem 'ostruct'
